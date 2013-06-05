@@ -62,18 +62,29 @@ article {
     display: block;
 }
 
+p {
+    margin: 1rem 0;
+}
+
 #list .contents {
     display: none;
 }
 
 #list article {
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     border-bottom: 1px solid #a8a8a8;
     cursor: pointer;
 }
-    #list article:hover {
-        background: #ffffef;
-    }
+
+#list article:hover {
+    background: #ffffef;
+}
+
+#detail .contents {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
 
 /*x-view .contents {
     padding: 1em;
