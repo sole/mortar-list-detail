@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>List detail template</title>
+        <meta name="description" content="A list that allows you to see the details of its items">
+        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <header>
+            <h1>My items</h1>
+        </header>
+
+        <x-slidebox>
+            <x-slides>
+                <x-slide id="list"> LIST (collection of articles? by default body is hidden with css) </x-slide>
+                <x-slide id="detail"> DETAIL (js: read data from clicked item, render on detail)</x-slide>
+            </x-slides>
+        </x-slidebox>
+
+   <!-- <x-listview class="list">
+      <header>
+        <h1>My Items</h1>
+        <button class="add" data-view=".edit" data-animation="slideDown">+</button>
+      </header>
+    </x-listview>
+
+    <x-view class="detail">
+      <header>
+        <h1>Details</h1>
+        <button data-view="x-view.edit">Edit</button>
+      </header>
+
+      <h1 class="title"></h1>
+      <p class="desc"></p>
+      <p class="date"></p>
+    </x-view>
+
+    <x-view class="edit">
+      <header><h1>Edit</h1></header>
+      <div class="field">Title: <input type="text" name="title" /></div>
+      <div class="field">Description: <input type="text" name="desc" /></div>
+      <button type="submit" class="add">Add</button>
+    </x-view>
+
+    <div class="loading">Loading...</div>
+
+    <script type="text/javascript"
+            data-main="js/init.js"
+            src="js/lib/require.js"></script>-->
+        <script src="js/lib/x-tag-core.js"></script>
+        <script src="js/lib/x-tag-slidebox.js"></script>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
