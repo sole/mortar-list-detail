@@ -3,56 +3,55 @@
   <head>
     <meta charset="utf-8">
 
-    <title></title>
-    <meta name="description" content="">
+    <title>List detail template</title>
+    <meta name="description" content="A list that allows you to see the details of its items">
     <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <!-- Use this installation button to install locally without going
-         through the marketpace (see app.js) -->
-    <!-- <button id="install-btn">Install</button>     -->
-
-    <div class="loading">Loading...</div>
     
-    <x-view id="app">
-      <x-listview class="list">
-        <header>
-          <button class="refresh">Refresh</button>
-          <h1>My Items</h1>
-          <button class="add" data-view=".edit" data-animation="slideDown">+</button>
-        </header>
-      </x-listview>
+    <x-slidebox id="slidebox">
+      <x-slides>
+        <x-slide id="list">
+          <header>
+            <h1>My items</h1>
+          </header>
 
-      <x-view class="detail">
-        <header>
-          <h1>Details</h1>
-          <button data-view="x-view.edit">Edit</button>
-        </header>
-        
-        <h1 class="title"></h1>
-        <p class="desc"></p>
-        <p class="date"></p>
-      </x-view>
+          <article>
+            <header><h1>Loch Ness monster seen in demonstration</h1></header>
+            <div class="contents">
+              <p>Monster expressed concern his popularity was fading out as more modern and innovative scares are devised by marketers.</p>
+              <p>Nessie -as he is commonly known- appeared to show no signs of ageing.</p>
+            </div>
+          </article>
+          <article>
+            <header><h1>Nazca lines considering possible rebranding</h1></header>
+            <div class="contents">
+              <p>Reports suggest they have been approached by several airlines in order to discuss the introduction of some sponsored messages in the fields.</p>
+            </div>
+          </article>
+          <button id="install-btn">Install</button>
+        </x-slide>
+        <x-slide id="detail">
+          <header>
+            <button>Back</button> 
+            <h1>Detail</h1>
+          </header>
+          <div class="contents">
+            DETAIL (js: read data from clicked item, render on detail)
+          </div>
+        </x-slide>
+      </x-slides>
+    </x-slidebox>
 
-      <x-view class="edit">
-        <header><h1>Edit</h1></header>
-        <div class="field">Title: <input type="text" name="title" /></div>
-        <div class="field">Description: <input type="text" name="desc" /></div>
-        <button type="submit" class="add">Add</button>
-      </x-view>
-    </x-view>
+    <script src="js/lib/x-tag-core.js"></script>
+    <script src="js/lib/x-tag-slidebox.js"></script>
 
-    <!-- Using require.js, a module system for javascript, include the
-         js files. This loads "main.js", which in turn can load other
-         files, all handled by require.js:
-         http://requirejs.org/docs/api.html#jsfiles -->
-    <script type="text/javascript" src="js/x-tag.js"></script>
-    <script type="text/javascript"
-            data-main="js/init.js"
-            src="js/lib/require.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

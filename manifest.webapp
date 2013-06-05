@@ -1,8 +1,8 @@
 {
   "version": "0.1",
-  "name": "My App",
+  "name": "My Awesome App with list and detailed views",
   "description": "Your new awesome Open Web App",
-  "launch_path": "/",
+  "launch_path": "/index.html",
   "icons": {
     "16": "/img/icons/mortar-16.png",
     "48": "/img/icons/mortar-48.png",
@@ -16,7 +16,7 @@
   "appcache_path": "/cache.manifest",
   "locales": {
     "es": {
-      "description": "Su nueva aplicación impresionante Open Web",
+      "description": "Su nueva e impresionante Open Web App",
       "developer": {
         "url": "http://yourawesomeapp.com"
       }
@@ -30,3 +30,4 @@
   },
   "default_locale": "en"
 }
+
