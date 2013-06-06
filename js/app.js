@@ -4,6 +4,10 @@ var detail = document.getElementById('detail');
 var detailH1 = detail.querySelector('h1');
 var detailContents = detail.querySelector('.contents');
 
+init();
+
+// ---
+
 function init() {
 
     // Set up event listeners for reacting to mouse / touch actions
@@ -14,6 +18,10 @@ function init() {
         article.addEventListener('click', showDetail, false);
     }
 
+    // Also set up the behaviour for the `Back` button that is included
+    // in the detail view
+    // The slides in the slidebox are numbered with a zero-based index,
+    // so the first one is at position 0, and the second one is at position 1.
     document.querySelector('#detail button').addEventListener('click', function() {
         slidebox.slideTo(0);
     }, false);
@@ -42,7 +50,13 @@ function init() {
 
 }
 
-function showDetail(event) {
+// This is executed in the context of the clicked article
+// Therefore, `this` is the article, and we use that reference to find the
+// title (h1) and the contents (.contents) of the article, and copy it over
+// to the detail title and contents elements that we already located in the
+// `init` function.
+// Once that's done, we'll just slide to the view slide (at position `1`)
+function showDetail(ev) {
     var article = this;
     var h1 = article.querySelector('h1');
     var contents = article.querySelector('.contents');
@@ -52,8 +66,4 @@ function showDetail(event) {
 
     slidebox.slideTo(1);
 }
-
-// ---
-
-init();
 

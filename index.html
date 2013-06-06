@@ -19,31 +19,66 @@
       <x-slides>
         <x-slide id="list">
           <header>
-            <h1>My items</h1>
+            <h1>List and details</h1>
           </header>
 
+          <!--
+          
+          Here are some articles to populate the list.
+          
+          The .contents div is hidden using CSS, and copied over to the detail view
+          when the article is selected
+
+          -->
+
           <article>
-            <header><h1>Loch Ness monster seen in demonstration</h1></header>
+            <header><h1>What is this?</h1></header>
             <div class="contents">
-              <p>Monster expressed concern his popularity was fading out as more modern and innovative scares are devised by marketers.</p>
-              <p>Nessie -as he is commonly known- appeared to show no signs of ageing.</p>
+              <p>This is a template that presents a list of articles, and allows the user to expand the selected article and read its details by sliding the full view of the article from the right.</p>
+              <p>The list/detail paradigm is found in pretty much every mobile app.</p>
             </div>
           </article>
+
           <article>
-            <header><h1>Nazca lines considering possible rebranding</h1></header>
+            <header><h1>How does it work?</h1></header>
             <div class="contents">
-              <p>Reports suggest they have been approached by several airlines in order to discuss the introduction of some sponsored messages in the fields.</p>
+              <p>When the page is loaded, we gather all <strong>&lt;article&gt;</strong> elements inside the <strong>#list</strong> element, and set up some listeners to detect when an article is touched.</p>
+              <p>Then when the user taps over an article, we copy its title and contents to the detail view, and slide to the right, in order to see the details.</p>
+              <p>You can have a look at <a href="js/app.js">app.js</a> to see what is going on, code wise.</p>
             </div>
           </article>
+
+          <article>
+            <header><h1>x-slidebox? x-slides? X-Tag!</h1></header>
+            <div class="contents">
+              <p>We are using a few custom web components to build this template with clean markup.</p>
+              <p>Web components allow developers to define their own HTML elements that can be used as any other existing tag. For example, we are using the <strong>&lt;x-slidebox&gt;</strong> from <a href="http://x-tags.org/">X-Tags</a> to lay out the two views (<em>list</em> and <em>detail</em>) and get the sliding behaviour, all with very few lines of code.</p>
+            </div>
+          </article>
+
+           <article>
+            <header><h1>It can be installed (under certain platforms)</h1></header>
+            <div class="contents">
+              <p>If you view this template with Firefox OS or a Firefox browser, you will see an <em>Install</em> button. This allows you to turn the template into a web app that can be installed in your device: you get the shortcut in your list of apps, and you can open and close it like any other app!</p>
+              <p><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Open Web Apps</a> require you to provide a file called <strong>manifest.webapp</strong> that specifies what the full name of the app is, a description, where the icon is, etc. It is called the manifest file, and we already <a href="manifest.webapp">wrote one</a> for you.</p>
+              <p>Be sure to have a look at the manifest file and change as many values as required if you use this template as the base for your app!</p>
+            </div>
+          </article>
+
+          <!-- Enables installing this app, where appropriate -->
           <button id="install-btn">Install</button>
         </x-slide>
+
+        <!--
+          The detail view is populated when an article is selected
+          (by tapping or clicking it)
+        -->
         <x-slide id="detail">
           <header>
             <button>Back</button> 
-            <h1>Detail</h1>
+            <h1></h1>
           </header>
           <div class="contents">
-            DETAIL (js: read data from clicked item, render on detail)
           </div>
         </x-slide>
       </x-slides>
