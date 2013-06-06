@@ -51,6 +51,7 @@ header button {
     background: -moz-linear-gradient(top, #efefef, #ccc); /* TODO rest of gradients */
     border-radius: 0.5rem;
     border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
 }
 
 h1 {
