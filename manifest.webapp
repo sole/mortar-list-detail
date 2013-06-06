@@ -1,7 +1,7 @@
 {
   "version": "0.1",
-  "name": "My Awesome App with list and detailed views",
-  "description": "Your new awesome Open Web App",
+  "name": "List and details",
+  "description": "An app with list and detailed views",
   "launch_path": "/index.html",
   "icons": {
     "16": "/img/icons/mortar-16.png",
@@ -16,13 +16,13 @@
   "appcache_path": "/cache.manifest",
   "locales": {
     "es": {
-      "description": "Su nueva e impresionante Open Web App",
+      "description": "Una aplicación que muestra una lista y una vista detallada",
       "developer": {
         "url": "http://yourawesomeapp.com"
       }
     },
     "it": {
-      "description": "Il vostro nuovo fantastico Open Web App",
+      "description": "Una applicazione che mostra una vista lista e una vista dettagliata",
       "developer": {
         "url": "http://yourawesomeapp.com"
       }

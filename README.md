@@ -1,31 +1,36 @@
+# A List/Detail Template for Open Web Apps
 
-# A List/Detail Template for Open Web Apps (beta)
+*NOTE: This template has been updated with a new, drastically simpler structure as of June 2013.*
 
-**Warning**: the contents in this tempate are deprected, and will soon be replaced by a much different structure. Volo and several other things will be removed to offer a simpler and more extensible template.
+This template provides a basic list/detail [Open Web App](https://developer.mozilla.org/en-US/docs/Web/Apps) with a few lines of HTML, JavaScript and CSS.
 
-This template comes with a new layouts library that lets you create apps quickly, and initial HTML and javascript that defines a list/detail application.
+It uses several [X-Tags](http://www.x-tags.org/) custom components to build the structure and get the sliding behaviour in a clear and very simple way.
 
-It is part of the [mortar](https://github.com/mozilla/mortar/)
-template collection for building Open Web Apps.
+[See the template in action](http://mozilla.github.com/mortar-list-detail/).
 
-The layouts library is called [mortar-layouts](https://github.com/mozilla/mortar-layouts), and you can read more about it in the project page. It uses [backbone.js](http://backbonejs.org/) to provide a powerful yet minimal application UI framework.
-
-[Check out what the template is by default](http://mozilla.github.com/mortar-list-detail/).
-
-# Usage
+## Usage
 
 There are a few ways to get this template:
 
-* git clone git://github.com/mozilla/mortar-list-detail.git myapp
-* volo create myapp mozilla/mortar-list-detail
+* ```git clone git://github.com/mozilla/mortar-list-detail.git myapp``` will create a ```myapp``` directory with the contents of the template, or
+* download [a ZIP file](https://github.com/mozilla/mortar-list-detail/archive/master.zip) containing the latest version, or
+* ```volo create myapp mozilla/mortar-list-detail``` if you use [volo](http://volojs.org/)
 
-If you have node installed, you can run a development server with volo:
+Then, simply open the ```index.html``` file to get started.
 
-* cd myapp
-* volo serve
+## Customizing
 
-View the list/detail app at http://localhost:8008/.
+There are numerous comments in the code to guide you along, but you can delete them once you're done with them.
 
-# Customizing
+### Content
 
-You'll probably want to change how this template works to build your app. The meat of this template is in the [mortar-layouts](https://github.com/mozilla/mortar-layouts) library, which this uses to construct a UI powered by [backbone.js](http://backbonejs.org/). You should [read the documentation](https://github.com/mozilla/mortar-layouts#mortar-layouts) in the mortar-layouts project.
+The content is specified in ```index.html```. You can change the existing ```article```s in the list, or add more. Everything inside the ```<div class="contents"></div>``` elements will be shown in the detail view.
+
+### Appearance
+
+The general appearance is defined in ```css/app.css```.
+
+The transition for the **sliding behaviour** is defined in ```css/slidebox.css```. If you want to play with settings such as the easing function and the transition length, this is your place.
+
+Finally, you can also change the **install button** look and feel by editing the ```css/install-button.css``` file.
+
