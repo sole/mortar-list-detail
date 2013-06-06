@@ -38,12 +38,12 @@ x-slide > header {
 }
 
 x-slide > header > h1 {
-    font-size: 250%;
+    font-size: 150%;
 }
 
 header button {
     float: left;
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
     vertical-align: middle;
     font-size: 1rem;
     line-height: 1;
@@ -52,6 +52,7 @@ header button {
     border-radius: 0.5rem;
     border: 1px solid rgba(0,0,0,0);
     cursor: pointer;
+    margin-right: 0.25rem;
 }
 
 h1 {
@@ -81,8 +82,12 @@ p {
     background: #ffffef;
 }
 
+#list article h1 {
+    font-size: 1rem;
+    margin-left: 0.25rem;
+}
 #detail .contents {
     padding: 0 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.6;
 }
