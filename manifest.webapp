@@ -22,7 +22,7 @@
       }
     },
     "it": {
-      "description": "Una applicazione che mostra una vista lista e una vista dettagliata",
+      "description": "Una applicazione che mostra un listato e una vista di dettaglio",
       "developer": {
         "url": "http://yourawesomeapp.com"
       }
